@@ -1,0 +1,112 @@
+##Raw code for below questions
+1 -  Write a java program to print the multiplication table of a given number.
+
+2 -  Write a java program to add two numbers.
+
+3 -  Write a java program to find out the day of the week given the number.   -- Pending
+
+4 –  Write a java program to calculate income tax on a given income considering Indian laws.
+
+5 – Write a java program to sum first n even numbers using for loops.
+
+6 – Write a program to print the following pattern:
+
+*****
+
+  ****
+
+    ***
+
+      **
+
+        *
+
+
+
+##problem number 1
+public static void main(string args[]){
+Scanner sc = new Scanner(System.in);
+int number;
+number = sc.nextInt();
+for(int i=1;i<=10;i++){
+  system.out.println(number +  " * " + i " = ", i*number);
+}
+}
+
+
+##problem number 2
+public static void main(string args[]){
+Scanner sc = new Scanner(System.in);
+int number1,number2;
+number1 = sc.nextInt();
+number2 = sc.nextInt();
+int sum = number1 + number2;
+  system.out.println(number1 + " + " + number2 + " = " + (sum));
+}
+
+
+##problem number 4
+public static void main(string args[]){
+Scanner sc = new Scanner(System.in);
+long salary;
+int slab[]={0,5,10,15,20,25,30};
+salary = sc.nextInt();
+if(salary>=0 && salary<=250000){
+System.out.println("Congratulations, NO Income tax to pay!!");
+}
+else if(salary>250000 && salary<=500000){
+System.out.println("The maximum tax to be paid is!!" +  ((salary*slab[1])/100));
+}
+else if(salary>500000 && salary<=750000){
+System.out.println("The maximum tax to be paid is!!" + (12500 + ((salary-500000)*slab[2])/100));
+}
+else if(salary>750000 && salary<=1000000){
+System.out.println("The maximum tax to be paid is!!" + (37500 + ((salary-750000)*slab[3])/100));
+}
+else if(salary>1000000 && salary<=1250000){
+System.out.println("The maximum tax to be paid is!!" + (75000 + ((salary-1000000)*slab[4])/100));
+}
+else if(salary>1250000 && salary<=1500000){
+System.out.println("The maximum tax to be paid is!!" + (125000 + ((salary-1250000)*slab[5])/100));
+}
+else if(salary>1500000){
+System.out.println("The maximum tax to be paid is!!" + (187500 + ((salary-1500000)*slab[6])/100));
+}
+else{
+System.out.println("Please enter a valid salary!!");
+}
+}
+
+
+#problem number 5
+public static void main(string args[]){
+Scanner sc = new Scanner(System.in);
+int n= sc.nextInt();
+int sum = 0;
+for(int i=0;i< 2 * n - 2 ; i+=2)
+{
+sum = sum + i;
+}
+System.out.println("The total sum of first " + n + " even numbers is : " + sum);
+}
+
+#problem number 6
+public class Main
+{
+	public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int n = sc.nextInt();
+//for lines
+for(int i=0;i<n;i++){
+//for spaces
+for(int j=i;j>0;j--){
+System.out.print(" ");
+}
+for(int k=1;k<=n-i;k++){
+System.out.print("*");
+}
+System.out.println();
+}
+
+	}
+}
